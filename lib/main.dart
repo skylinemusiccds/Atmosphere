@@ -1,4 +1,5 @@
 import 'dart:io';
+
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dynamic_color/dynamic_color.dart';
 import 'package:flutter/foundation.dart';
@@ -29,8 +30,7 @@ late Isar isar;
 late Settings settings;
 bool isOnline = false;
 
-FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
-    FlutterLocalNotificationsPlugin();
+FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
 
 bool amoledTheme = false;
 bool materialColor = false;
@@ -80,8 +80,7 @@ void main() async {
   Connectivity().onConnectivityChanged.listen((ConnectivityResult result) {
     result == ConnectivityResult.none ? isOnline = false : isOnline = true;
   });
-  SystemChrome.setSystemUIOverlayStyle(
-      const SystemUiOverlayStyle(systemNavigationBarColor: Colors.black));
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(systemNavigationBarColor: Colors.black));
   if (Platform.isAndroid) {
     Workmanager().initialize(callbackDispatcher, isInDebugMode: kDebugMode);
     await setOptimalDisplayMode();
@@ -96,8 +95,7 @@ void main() async {
   await isarInit();
   const AndroidInitializationSettings initializationSettingsAndroid =
       AndroidInitializationSettings('@mipmap/ic_launcher');
-  const DarwinInitializationSettings initializationSettingsDarwin =
-      DarwinInitializationSettings();
+  const DarwinInitializationSettings initializationSettingsDarwin = DarwinInitializationSettings();
   const LinuxInitializationSettings initializationSettingsLinux =
       LinuxInitializationSettings(defaultActionName: 'Rain');
   const InitializationSettings initializationSettings = InitializationSettings(
@@ -113,13 +111,10 @@ Future<void> setOptimalDisplayMode() async {
   final List<DisplayMode> supported = await FlutterDisplayMode.supported;
   final DisplayMode active = await FlutterDisplayMode.active;
   final List<DisplayMode> sameResolution = supported
-      .where((DisplayMode m) =>
-          m.width == active.width && m.height == active.height)
+      .where((DisplayMode m) => m.width == active.width && m.height == active.height)
       .toList()
-    ..sort((DisplayMode a, DisplayMode b) =>
-        b.refreshRate.compareTo(a.refreshRate));
-  final DisplayMode mostOptimalMode =
-      sameResolution.isNotEmpty ? sameResolution.first : active;
+    ..sort((DisplayMode a, DisplayMode b) => b.refreshRate.compareTo(a.refreshRate));
+  final DisplayMode mostOptimalMode = sameResolution.isNotEmpty ? sameResolution.first : active;
   await FlutterDisplayMode.setPreferredMode(mostOptimalMode);
 }
 
@@ -163,7 +158,7 @@ class MyApp extends StatefulWidget {
       state.changeAmoledTheme(newAmoledTheme);
     }
     if (newMaterialColor != null) {
-      state.changeMarerialTheme(newMaterialColor);
+      state.changeMaterialTheme(newMaterialColor);
     }
     if (newLocale != null) {
       state.changeLocale(newLocale);
@@ -198,7 +193,7 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
-  void changeMarerialTheme(bool newMaterialColor) {
+  void changeMaterialTheme(bool newMaterialColor) {
     setState(() {
       materialColor = newMaterialColor;
     });
@@ -244,8 +239,7 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     amoledTheme = settings.amoledTheme;
     materialColor = settings.materialColor;
-    locale = Locale(
-        settings.language!.substring(0, 2), settings.language!.substring(3));
+    locale = Locale(settings.language!.substring(0, 2), settings.language!.substring(3));
     timeRange = settings.timeRange ?? 1;
     timeStart = settings.timeStart ?? '09:00';
     timeEnd = settings.timeEnd ?? '21:00';
@@ -261,10 +255,8 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return DynamicColorBuilder(
       builder: (lightColorScheme, darkColorScheme) {
-        final lightMaterialTheme =
-            lightTheme(lightColorScheme?.surface, lightColorScheme);
-        final darkMaterialTheme =
-            darkTheme(darkColorScheme?.surface, darkColorScheme);
+        final lightMaterialTheme = lightTheme(lightColorScheme?.surface, lightColorScheme);
+        final darkMaterialTheme = darkTheme(darkColorScheme?.surface, darkColorScheme);
         final darkMaterialThemeOled = darkTheme(oledColor, darkColorScheme);
 
         return GetMaterialApp(
@@ -293,8 +285,7 @@ class _MyAppState extends State<MyApp> {
           translations: Translation(),
           locale: locale,
           fallbackLocale: const Locale('en', 'US'),
-          supportedLocales:
-              appLanguages.map((e) => e['locale'] as Locale).toList(),
+          supportedLocales: appLanguages.map((e) => e['locale'] as Locale).toList(),
           debugShowCheckedModeBanner: false,
           home: settings.onboard ? const HomePage() : const OnboardingPage(),
         );

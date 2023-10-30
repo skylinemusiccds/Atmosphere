@@ -111,7 +111,6 @@ class _InfoDailyCardState extends State<InfoDailyCard> {
                               image: AssetImage(
                                 statusWeather.getImageNowDaily(
                                   indexedWeatherCodeDaily,
-                                  timeDaily[index],
                                 ),
                               ),
                               fit: BoxFit.fill,
