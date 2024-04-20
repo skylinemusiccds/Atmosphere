@@ -1,6 +1,6 @@
 <div align='center'>
 <img src='/assets/icons/icon.png' width='150'/>
-<h2>🌦️ Rain</h2>
+<h2>🌦️ Atmosphere 🌦️</h2>
 </div>
 
 <p align='center'>
@@ -12,7 +12,7 @@
  </p>
 </p>
 
-<p align='center'> Tired of unpredictable weather? Rain's got you covered! Get ready for any forecast. 🌦️ </p>
+<p align='center'> Tired of unpredictable weather? Atmosphere's got you covered! Get ready for any forecast. 🌦️ </p>
 
 ### 🌍 Be aware of the weather
 
@@ -44,17 +44,13 @@ We fetch weather data from [Open-Meteo](https://open-meteo.com/en/docs) and use 
 
 ### 💰 Support Us
 
-If you find Rain valuable and worthy for future innovation, consider supporting us through donations:
-
-[![DonationAlerts](https://img.shields.io/badge/DonationAlerts-orange?style=for-the-badge)](https://www.donationalerts.com/r/darkmoonight)
-[![ЮMoney](https://img.shields.io/badge/ЮMoney-violet?style=for-the-badge)](https://yoomoney.ru/to/4100117672775961)
+If you find Atmosphere valuable and worthy for future innovation, consider supporting us by staring the project.
 
 ### 📥 Get Rain Now
 
-[![Play Store](https://img.shields.io/badge/Google_Play-414141?style=for-the-badge&logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=com.yoshi.rain)
-[![RuStore](https://img.shields.io/badge/RuStore-blue?style=for-the-badge&logo=vk&logoColor=white)](https://apps.rustore.ru/app/com.yoshi.rain)
+[![Play Store](https://img.shields.io/badge/Google_Play-414141?style=for-the-badge&logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=com.universe.android.atmosphere)
 
-Or get the latest APK from the [Releases Section](https://github.com/DarkMooNight/Rain/releases/latest). You can also find the app on IzzyOnDroid via a F-Droid client [here](https://apt.izzysoft.de/fdroid/index/apk/com.yoshi.rain).
+Or get the latest APK from the [Releases Section](https://github.com/UniVerseCorp/Atmosphere/releases/latest)
 
 ### 📃 License
 
@@ -62,6 +58,3 @@ This project is licensed under the [MIT License](./LICENSE).
 
 ### 👨‍💻 Our Contributors
 
-<a href='https://github.com/darkmoonight/Rain/graphs/contributors'>
-  <img src='https://contrib.rocks/image?repo=darkmoonight/Rain' />
-</a>
