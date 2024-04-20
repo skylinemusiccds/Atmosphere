@@ -8,7 +8,7 @@
     <a href='https://github.com/skylinemusiccds/Atmosphere/stargazers'><img alt='Stars' src='https://img.shields.io/github/stars/darkmoonight/Rain?color=abc0d3'/></a>
     <a href='https://github.com/skylinemusiccds/Atmosphere/forks'><img alt='Forks' src='https://img.shields.io/github/forks/darkmoonight/Rain?color=abc0d3'/></a>
     <a href='https://github.com/skylinemusiccds/Atmosphere/releases'><img alt='GitHub release' src='https://img.shields.io/github/v/release/darkmoonight/Rain?color=abc0d3'/></a>
-    <a href='https://github.com/darkmoonight/Rain/blob/main/LICENSE'><img alt='License' src='https://img.shields.io/github/license/darkmoonight/Rain?color=abc0d3'/></a>
+    <a href='https://github.com/skylinemusiccds/Atmosphere/blob/main/LICENSE'><img alt='License' src='https://img.shields.io/github/license/darkmoonight/Rain?color=abc0d3'/></a>
  </p>
 </p>
 
